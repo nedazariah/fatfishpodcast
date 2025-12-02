@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-y: visible;
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #ff751f;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-container {
+    height: 20vh;
+    text-align: center;
+}
+
+.logo-container img {
+    height: 110%;
+    width: 25%;
+    z-index: -1;
+}
+
+.tape {
+    position: relative;
+    height: 5vh;
+    width: 100%;
+    background-color: yellow;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tape div {
+    animation: textScroll 15s linear infinite;
+}
+
+@keyframes textScroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+.podcast {
+    height: 75vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(assets/BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.podcast-cover {
+    height: 99%;
+    width: 40%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast-cover img {
+    height: 90%;
+}
+
+.podcast-links {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.podcast-link {
+    border-radius: 50px;
+    height: 90%;
+    width: 25%;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.podcast-link img {
+    height: 90%;
+    width: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.podcast-ep {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podcast-text {
+    width: 100%;
+    height: 20%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff751f;
+    -webkit-text-stroke: 2px black;
+}
+
+.podcast-player {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.podcast-player iframe {
+    height: 95%;
+    width: 85%;
+    border: 4px solid #ff751f;
+    border-radius: 10px;
+}
+
+#anchor {
+    scroll-snap-align: start;
+}
+
+.merch {
+    height: 95vh;
+    width: 100%;
+    background-color: #ff751f;
+}
+
+.merch-text {
+    height: 20%;
+    font-size: 3vw;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 1.3%;
+}
+
+.merch-cta {
+    height: 80%;
+    width: 100%;
+    display: flex;
+}
+
+.merch-link {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.merch-btn {
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    background-color: bisque;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.merch-btn img {
+    height: 150%;
+    width: auto;
+}
+
+.merch-photo {
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.merch-photo img {
+    height: 130%;
+    width: auto;
+}
+
+.dates {
+    height: 90vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(assets/BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dates-text {
+    height: 20%;
+    font-size: 3vw;
+    color: black;
+    text-align: center;
+    padding-top: 1.3%;
+}
+
+.dates-info-one {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+}
+
+.date-detail {
+    width: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.date {
+    color: darkorange;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.city {
+    font-size: 30px;
+}
+
+.club {
+    color: maroon;
+    font-size: 20px;
+}
+
+.line {
+    width: 100%;
+    border: 3px solid black;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+@media screen and (max-width: 900px) {
+    .podcast {
+        min-height: 100vh;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .podcast-cover {
+        width: 100%;
+        height: 40%;
+        margin: 0;
+    }
+    .podcast-cover img {
+        height: 80%;
+    }
+    .podcast-ep {
+        height: 60%;
+        width: 100%;
+    }
+    .podcast-text {
+        font-size: 20px;
+        width: 100%;
+    }
+    .podcast-links {
+        height: 23%;
+    }
+
+    .merch {
+        min-height: 100%;
+    }
+    .merch-text {
+        height: 10%;
+        font-size: 30px;
+    }
+    .merch-cta {
+        flex-direction: column-reverse;
+        height: 90%;
+    }
+    .merch-photo {
+        width: 100%;
+        height: 90%;
+    }
+    .merch-photo img {
+        width: 55%;
+        height: 100%;
+    }
+    .merch-link {
+        width: 100%;
+        height: 10%;
+        justify-content: center;
+    }
+    .merch-btn {
+        font-size: 3vw;
+        width: 50%;
+        height: 80%;
+    }
+    .merch-btn img {
+        width: auto;
+        height: 140%;
+    }
+
+    .dates {
+        min-height: 90vh;
+        height: 100%;
+    }
+    .dates-info-one {
+        flex-direction: column;
+    }
+    .date-detail {
+        margin-bottom: 45px;
+    }
+}
+
+footer {
+    height: 5vh;
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links {
+    height: 90%;
+    width: auto;
+    margin: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social-links img {
+    height: 80%;
+    border-radius: 100%;
+}
