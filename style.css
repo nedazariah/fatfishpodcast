@@ -1,8 +1,15 @@
+@font-face {
+    font-family: "SuperComicFont";
+    src: url(assets/super-comic-font/SuperComic-qZg62.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cursive;
+    font-family: "SuperComicFont";
 }
 
 html,
@@ -35,7 +42,7 @@ header {
     height: 5vh;
     width: 100%;
     background-color: yellow;
-    font-size: x-large;
+    font-size: 1.5vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -114,7 +121,7 @@ header {
 .podcast-text {
     width: 100%;
     height: 20%;
-    font-size: 3vw;
+    font-size: 1.7vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,7 +205,7 @@ header {
 }
 
 .merch-photo img {
-    height: 130%;
+    height: 120%;
     width: auto;
 }
 
@@ -239,16 +246,16 @@ header {
 .date {
     color: darkorange;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.5vw;
 }
 
 .city {
-    font-size: 30px;
+    font-size: 1.7vw;
 }
 
 .club {
     color: maroon;
-    font-size: 20px;
+    font-size: 1.3vw;
 }
 
 .line {
@@ -354,4 +361,3 @@ footer {
     height: 80%;
     border-radius: 100%;
 }
-
