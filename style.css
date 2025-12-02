@@ -28,12 +28,14 @@ header {
 
 .logo-container {
     height: 20vh;
+    width: 100%;
     text-align: center;
 }
 
 .logo-container img {
-    height: 110%;
-    width: 25%;
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
     z-index: -1;
 }
 
@@ -66,9 +68,8 @@ header {
 .podcast {
     height: 75vh;
     width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(assets/BG.jpg);
+    background-image: url(assets/BG.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
 }
 
@@ -125,7 +126,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ff751f;
+    color: white;
     -webkit-text-stroke: 2px black;
 }
 
@@ -266,6 +267,9 @@ header {
 }
 
 @media screen and (max-width: 900px) {
+    .logo-container img {
+        width: 100%;
+    }
     .tape {
         font-size: 3vw;
     }
